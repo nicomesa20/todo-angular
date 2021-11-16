@@ -25,7 +25,8 @@
   }
 }
 
-.todo-item-left { // later
+.todo-item-left {
+  // later
   display: flex;
   align-items: center;
 }
@@ -43,7 +44,7 @@
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc; //override defaults
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
 
   &:focus {
     outline: none;
@@ -71,7 +72,8 @@ button {
   appearance: none;
 
   &:hover {
-    background: lightgreen;
+    background: hsl(210, 96%, 54%);
+    color: white;
   }
 
   &:focus {
@@ -80,14 +82,17 @@ button {
 }
 
 .active {
-  background: lightgreen;
+  background: hsl(210, 96%, 54%);
+  color: white;
 }
 
 // CSS Transitions
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .2s;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s;
 }
 
-.fade-enter, .fade-leave-to {
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
 }
