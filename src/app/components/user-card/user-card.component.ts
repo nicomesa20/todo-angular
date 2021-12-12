@@ -1,5 +1,6 @@
 import { trigger, transition, style, animate } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ICard } from 'src/app/interfaces/card';
 
 @Component({
   selector: 'app-user-card',
@@ -18,6 +19,8 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class UserCardComponent implements OnInit {
+
+  @Input() card: ICard;
 
   constructor() { }
 

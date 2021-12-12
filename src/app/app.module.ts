@@ -10,6 +10,9 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { UserCardComponent } from './components/user-card/user-card.component';
+import { PruebaComponenteComponent } from './components/prueba-componente/prueba-componente.component';
+import { CardService } from './services/card.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,8 @@ import { UserCardComponent } from './components/user-card/user-card.component';
     TodoListComponent,
     FilterPipe,
     UserListComponent,
-    UserCardComponent
+    UserCardComponent,
+    PruebaComponenteComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +29,8 @@ import { UserCardComponent } from './components/user-card/user-card.component';
     FormsModule,
     AutofocusModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

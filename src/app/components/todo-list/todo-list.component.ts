@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Todo } from '../../interfaces/todo';
 import { trigger, transition, style, animate } from '@angular/animations';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { FilterEnum } from 'src/app/interfaces/filter.enum';
 
 @Component({

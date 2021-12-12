@@ -8,7 +8,6 @@ import { Todo } from '../interfaces/todo';
 export class FilterPipe implements PipeTransform {
 
   transform(value: Todo[], filter: number): any {
-    console.log(value, filter)
     if (!value || !filter) return value;
 
     if (filter === FilterEnum.ALL) {
@@ -18,7 +17,6 @@ export class FilterPipe implements PipeTransform {
     } else if (filter === FilterEnum.COMPLETED) {
       return value.filter(todo => todo.completed);
     }
-
     return value;
   }
 

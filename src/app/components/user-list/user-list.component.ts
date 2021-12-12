@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ICard } from 'src/app/interfaces/card';
+import { CardService } from 'src/app/services/card.service';
 
 @Component({
   selector: 'app-user-list',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserListComponent implements OnInit {
 
-  constructor() { }
+  public cardsList: ICard[];
+
+  constructor(
+    private cardService: CardService
+  ) { }
 
   ngOnInit() {
+    this.cardService.listCardItems().subscribe(cardList => {
+      this.cardsList = cardList
+    })
   }
 
 }
